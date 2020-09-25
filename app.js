@@ -1,24 +1,26 @@
-const app=Vue.createApp({
-  data(){
+const app = Vue.createApp({
+  data() {
     return {
-      isVisible:true,
-      userClass:"",
-      userColor:""
+      inputClass: '',
+      paragraphIsVisible: true,
+      inputBackgroundColor: ''
     };
   },
-  computed:{
-    userClasses(){
-      return{
-        [this.userClass] : Boolean(this.userClass),
-        visible:this.visible,
-        hidden:!this.visible
+  computed: {
+    paraClasses() {
+      return {
+        user1: this.inputClass === 'user1',
+        user2: this.inputClass === 'user2',
+        visible: this.paragraphIsVisible,
+        hidden: !this.paragraphIsVisible
       };
-    }
+    },
   },
-  methods:{
-    toggleVisibility(){
-      this.isVisible=!this.isVisible;
-    }
-  }
+  methods: {
+    toggleParagraphVisibility() {
+      this.paragraphIsVisible = !this.paragraphIsVisible;
+    },
+  },
 });
-app.mount("#assignment");
+
+app.mount('#assignment');
