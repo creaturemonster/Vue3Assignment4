@@ -2,8 +2,8 @@ const app=Vue.createApp({
   data(){
     return {
       isVisible:true,
-      userClass="",
-      userColor=""
+      userClass:"",
+      userColor:""
     };
   },
   computed:{
